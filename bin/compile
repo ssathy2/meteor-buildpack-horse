@@ -67,12 +67,13 @@ METEOR="$METEOR_DIR/.meteor/meteor" # The meteor binary.
 #
 echo "-----> Installing Roles"
 cd $APP_CHECKOUT_DIR
-mrt add roles 
+$METEOR add roles 
 
 #
 # Build the meteor app!
 #
 echo "-----> Bundling bundle"
+
 
 # Now on to bundling. Don't put the bundle in $APP_CHECKOUT_DIR, or it will
 # recurse, trying to bundle up its own bundling.
