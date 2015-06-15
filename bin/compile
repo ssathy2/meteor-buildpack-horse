@@ -63,10 +63,16 @@ curl -sS https://install.meteor.com | HOME="$METEOR_DIR" /bin/sh
 METEOR="$METEOR_DIR/.meteor/meteor" # The meteor binary.
 
 #
+# Install Roles
+#
+echo "-----> Installing Roles"
+cd $APP_CHECKOUT_DIR
+mrt add roles 
+
+#
 # Build the meteor app!
 #
 echo "-----> Bundling bundle"
-cd $APP_CHECKOUT_DIR
 
 # Now on to bundling. Don't put the bundle in $APP_CHECKOUT_DIR, or it will
 # recurse, trying to bundle up its own bundling.
